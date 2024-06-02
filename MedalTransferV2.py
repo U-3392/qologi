@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import csv
+import ConflictChecker
+import SciOConversion
 
 pathfile1 = 'invies/2024-02-10_yale_invitational_c.csv' # rename comp file here
 pathfile2 = 'teams/yale team raws - Sheet1.csv' # rename team file here
