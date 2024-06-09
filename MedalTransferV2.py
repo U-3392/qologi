@@ -16,3 +16,8 @@ res = res.drop(['team','school', 'exhibition', 'city', 'state', 'number', 'track
 res = res.rename(columns = {5: 'Team A'})
 
 print(res)
+
+fin_df = pd.DataFrame()
+
+for person in full_team.iloc[:, 0]:
+    print(person)

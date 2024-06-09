@@ -8,7 +8,7 @@ filename1 = 'teams/yale team raws - Sheet1.csv' # file location here
 
 full_people = pd.read_csv(filename1)
 
-def eventtopeople(input):
+def peopletoevent(input):
     people = input[c]
     event_all = input.transpose()
     event_all = event_all.drop(nonevent)
@@ -24,11 +24,10 @@ def eventtopeople(input):
     e2p = {}
     for event in event_set:
         onlyThisEvent = event_all[event_all == event]
-        print(onlyThisEvent)
 
 # add new instance variables
 
-def peopletoevent(input):
+def eventtopeople(input):
     people = input[c]
     event_all = input.transpose()
     event_all = event_all.drop(nonevent)
