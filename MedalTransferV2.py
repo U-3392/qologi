@@ -15,9 +15,16 @@ res = res.transpose() # transposing to summarise statistics
 res = res.drop(['team','school', 'exhibition', 'city', 'state', 'number', 'track', 'total', 'rank']) #
 res = res.rename(columns = {5: 'Team A'})
 
-print(res)
+restemp = res.transpose()
 
-fin_df = pd.DataFrame()
+event_set = set()
+for col in restemp.columns:
+    event_set.add(col)
+event_set = sorted(event_set)
+event_set.insert(0, "Competitor")
+print(event_set)
+    
+fin_df = pd.DataFrame(columns=event_set)
 
 for person in full_team.iloc[:, 0]:
     print(person)
