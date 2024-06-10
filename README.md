@@ -7,11 +7,7 @@ checks for
 automates conversion between sorted by people and sorted by event 
 
 # medaltracker
-automates conversion between event-medal and people-event csvs into a people-medal csv. diff versions = diff. ways of sorting these medals... since idk what the logi status quo is rn haha!!
-
-here are some **diagrams** for clarification!
-
-
+automates conversion between event-medal and people-event csvs into a people-medal csv. diff versions = diff. ways of sorting these medals... since idk what the logi status quo is rn haha!
 
 currently only works with each csv being for a specific competition; intercompetition analysis coming soon?
 

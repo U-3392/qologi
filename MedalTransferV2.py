@@ -23,8 +23,22 @@ for col in restemp.columns:
 event_set = sorted(event_set)
 event_set.insert(0, "Competitor")
 print(event_set)
-    
-fin_df = pd.DataFrame(columns=event_set)
 
+people_set = set()
 for person in full_team.iloc[:, 0]:
-    print(person)
+    people_set.add(person)
+people_set = sorted(people_set)
+print(people_set)
+
+fin_df = pd.DataFrame(columns=event_set)
+fin_df['Competitor'] = people_set
+
+for person in full_team['Competitor']: # fix this later lmaoooooo;o;o;oo;;;o;;l;
+    count = 0
+    for x in range[2, 5]:
+        if np.isnan(person[x]) == False:
+            x
+        else:
+            count += 1
+    
+    
