@@ -7,7 +7,10 @@ nonevent = [c, "OSIS"] # non-event columns
 filename1 = 'teams/yale team raws - Sheet1.csv' # file location here
 
 
+<<<<<<< HEAD
 full_people = pd.read_csv(filename1)
+=======
+>>>>>>> 2c091ca4894d883cdf90874b88870ce58ddb6db7
 def peopletoevent(input):
     people = input[c]
     event_all = input.transpose()
@@ -41,10 +44,14 @@ def peopletoevent(input):
     print(e2p)
 
     for event in event_set:
+<<<<<<< HEAD
         all_event_loc = {}
         event_loc = {}
         
 
+=======
+        onlyThisEvent = event_all[event_all == event]
+>>>>>>> 2c091ca4894d883cdf90874b88870ce58ddb6db7
 
 # add new instance variables
 
