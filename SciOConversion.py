@@ -6,9 +6,9 @@ c = "Competitor" # name of category where people are
 nonevent = [c, "OSIS"] # non-event columns
 filename1 = 'teams/yale team raws - Sheet1.csv' # file location here
 
-full_people = pd.read_csv(filename1)
 
-def eventtopeople(input):
+full_people = pd.read_csv(filename1)
+def peopletoevent(input):
     people = input[c]
     event_all = input.transpose()
     event_all = event_all.drop(nonevent)
@@ -20,18 +20,38 @@ def eventtopeople(input):
     event_set = {x for x in event_set if pd.notna(x)}
     event_set = sorted(event_set)
     # all events found
-    print(event_set)
-    e2p = {}
+    # print(event_set)
+    # print(event_all)
+    people = sorted(people)
+    e2p = {
+        'Event' : event_set,
+        'Competitor 1' : ['test'],
+        'Competitor 2' : ['test 2'],
+        'Competitor 3' : ['test 3']
+    }
+
+    print(e2p)
+    print(type(e2p))
+    print(pd.DataFrame.to_dict(e2p, orient='index'))
+
+    for event in event_all:
+         return 2
+    
+    
+    print(e2p)
+
     for event in event_set:
-        onlyThisEvent = event_all[event_all == event]
-        print(onlyThisEvent)
+        all_event_loc = {}
+        event_loc = {}
+        
+
 
 # add new instance variables
 
-def peopletoevent(input):
+def eventtopeople(input):
     people = input[c]
     event_all = input.transpose()
     event_all = event_all.drop(nonevent)
     event_all = event_all.transpose()
 
-eventtopeople(full_people)
+peopletoevent(full_people)
